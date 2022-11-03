@@ -200,12 +200,10 @@ class PrettyPageHandler extends Handler
         }
 
         $templateFile = $this->getResource("views/layout.html.php");
-        $cssFile      = $this->getResource("css/whoops.base.css");
-        $zeptoFile    = $this->getResource("js/zepto.min.js");
-        $prismJs = $this->getResource("js/prism.js");
-        $prismCss = $this->getResource("css/prism.css");
-        $clipboard    = $this->getResource("js/clipboard.min.js");
-        $jsFile       = $this->getResource("js/whoops.base.js");
+        $cssFile      = $this->getResource("dist/css/whoops.min.css");
+        $jsFile       = $this->getResource("dist/js/whoops.min.js");
+        $vendorJsFile  = $this->getResource("dist/js/vendor.min.js");
+        $vendorCssFile = $this->getResource("dist/css/vendor.min.css");
 
         if ($this->customCss) {
             $customCssFile = $this->getResource($this->customCss);
@@ -223,12 +221,9 @@ class PrettyPageHandler extends Handler
         $vars = [
             "page_title" => $this->getPageTitle(),
 
-            // @todo: Asset compiler
             "stylesheet" => file_get_contents($cssFile),
-            "zepto"      => file_get_contents($zeptoFile),
-            "prismJs"   => file_get_contents($prismJs),
-            "prismCss"   => file_get_contents($prismCss),
-            "clipboard"  => file_get_contents($clipboard),
+            "vendorJs"   => file_get_contents($vendorJsFile),
+            "vendorCss"   => file_get_contents($vendorCssFile),
             "javascript" => file_get_contents($jsFile),
 
             // Template paths:

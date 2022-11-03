@@ -1,4 +1,7 @@
 composer.lock
+package-lock.json
 phpunit.xml
 report
 vendor
+node_modules
+.idea/**/*.*

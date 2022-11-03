@@ -12,7 +12,7 @@
     <title><?php echo $tpl->escape($page_title) ?></title>
 
     <style><?php echo $stylesheet ?></style>
-    <style><?php echo $prismCss ?></style>
+    <style><?php echo $vendorCss ?></style>
   </head>
   <body>
 
@@ -27,8 +27,7 @@
     </div>
 
     <script data-manual><?php echo $prismJs ?></script>
-    <script><?php echo $zepto ?></script>
-    <script><?php echo $clipboard ?></script>
+    <script><?php echo $vendorJs ?></script>
     <script><?php echo $javascript ?></script>
   </body>
 </html>
